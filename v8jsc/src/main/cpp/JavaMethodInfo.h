@@ -10,6 +10,11 @@
 
 #include <jni.h>
 
+#ifndef __NDK_FPABI__
+//#define __NDK_FPABI__ __attribute__((pcs("aapcs")))
+#define __NDK_FPABI__
+#endif
+
 namespace FQ{
 
 class JavaMethodInfo {
