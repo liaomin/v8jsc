@@ -13,8 +13,8 @@
  ```
  
 ### example
-```scss
-  
+```java
+  
   JSContext.currentContext().handleScope(new JSContext.HandleScopeBlock() {
             @Override
             public void onEnterHandleScope(JSContext context) {
