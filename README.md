@@ -1,15 +1,8 @@
 ### Gradle Dependency
 Add the following to your module's `build.gradle` file:
 ```groovy
- allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
-  
   dependencies {
-	        compile 'com.github.liaomin:v8jsc:v0.1.1'
+	        compile 'com.liam.library:v8jsc:v0.1.1'
 	}
  ```
  
