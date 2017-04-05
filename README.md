@@ -44,7 +44,10 @@ JSContext.currentContext().handleScope(new JSContext.HandleScopeBlock() {
             }
         });        
 ```
-
+### Notice
+ Include armeabi and x86 native library by default.add ndk { abiFilters 'armeabi'} to choose one
+ 
+ 
 License
 -------
 
