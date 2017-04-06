@@ -2,8 +2,8 @@
 Add the following to your module's `build.gradle` file:
 ```groovy
   dependencies {
-	        compile 'com.liam.library:v8jsc:v0.1.1'
-	}
+	       	 compile 'com.liam.library:v8jsc:v0.1.1'
+		}
  ```
  
 ### Usage
