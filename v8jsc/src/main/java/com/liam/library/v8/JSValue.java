@@ -44,7 +44,7 @@ public class JSValue {
 		Iterator<JSValue> iterator = used.iterator();
 		while (iterator.hasNext()) {
 			JSValue value = (JSValue) iterator.next();
-			value.removeRefrenc();
+			value.removeRefrence();
 		}
 	}
 	
@@ -57,7 +57,7 @@ public class JSValue {
 		used.offer(cJsValue);
 		cJsValue.nativeIdentity = nPtr;
 		cJsValue.context = context;
-		cJsValue.addRefrenc();
+		cJsValue.addRefrence();
 		return cJsValue;
 	}
 	
@@ -426,11 +426,11 @@ public class JSValue {
 		return referenceCount;
 	}
 
-	public int addRefrenc() {
+	public int addRefrence() {
 		return ++referenceCount;
 	}
 	
-	public void removeRefrenc() {
+	public void removeRefrence() {
 		referenceCount--;
 		used.remove(this);
 		if(referenceCount <= 0){
@@ -444,7 +444,7 @@ public class JSValue {
 		}
 	}
 
-	protected void justRemoveJavaRefrenc() {
+	protected void justRemoveJavaRefrence() {
 		referenceCount--;
 		used.remove(this);
 		if(referenceCount <= 0){

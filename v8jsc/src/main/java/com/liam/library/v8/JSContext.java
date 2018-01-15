@@ -168,14 +168,14 @@ public class JSContext extends JSValue{
 	 */
 	public void setGlobalObject(long nativeGlobalObjectPtr) {
 		globalObject =  new JSValue().setContext(this).setNativeAdress(nativeGlobalObjectPtr);
-		globalObject.addRefrenc();
+		globalObject.addRefrence();
 	}
 
 	public void setException(long e) {
 		JSValue exception = new JSValue().setContext(this).setNativeAdress(e);
-		exception.addRefrenc();
+		exception.addRefrence();
 		if(this.exception != null){
-			this.exception.removeRefrenc();
+			this.exception.removeRefrence();
 		}
 		this.exception = exception;
 		if(this.exceptionHandler != null){
@@ -215,16 +215,16 @@ public class JSContext extends JSValue{
 	protected static void removeCurrentArguments(){
 		if(!arguments.isEmpty()){
 			for (int i = 0; i < arguments.size(); i++) {
-				arguments.get(i).removeRefrenc();
+				arguments.get(i).removeRefrence();
 			}
 			arguments.clear();
 		}
 		if(jsCallee != null){
-			jsCallee.removeRefrenc();
+			jsCallee.removeRefrence();
 			jsCallee = null;
 		}
 		if(jsThis != null){
-			jsThis.removeRefrenc();
+			jsThis.removeRefrence();
 			jsThis = null;
 		}
 	}

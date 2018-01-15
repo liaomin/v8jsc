@@ -60,7 +60,7 @@ public class JavaReference {
 		}
 		JSValue res = JSValue.valueWithObject(JSContext.currentContext(),result);
 		long ni = res.nativeIdentity;
-		res.justRemoveJavaRefrenc();
+		res.justRemoveJavaRefrence();
 		return ni;
 	}
 
